@@ -1,0 +1,176 @@
+<!-- Header -->
+<div class="header">
+  <span>SocialNetwork</span>
+  <input type="text" placeholder="Find...">
+  <button class="upload-btn">Upload</button>
+  <div class="user-detail">
+    <button class="user-logo"></button>
+    <div>
+      Waseem <br> Arshad
+      <span class="badge">15</span>
+    </div>
+  </div>
+</div>
+
+<!-- Category -->
+<div class="category">
+  <span>Videos /</span>
+  <span>People /</span>
+  <span>Documents /</span>
+  <span>Events /</span>
+  <span>Communities /</span>
+  <span>Favorites /</span>
+  <span>Channels</span>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+  <!-- First -->
+  <div class="content">
+    <div class="main-image">
+      <div class="content-header">
+        <p class="content-title">Videos</p>
+        <span class="content-tag">Browse all videos</span>
+      </div>
+      <div class="image-title">
+        <img src="{{dataVideos[0].url}}" alt="">
+        <p><b>How to improve your skill</b>
+          <br>
+          by {{dataUsers[0].name}}
+        </p>
+        <small>{{dataVideos[0].id}} views</small>
+      </div>
+      <div class="image-sec">
+        <img src="{{dataVideos[1].url}}" alt="">
+        <img src="{{dataVideos[2].url}}" alt="">
+      </div>
+    </div>
+    <div class="image-mo">
+      <img src="{{dataVideos[3].url}}" alt="">
+      <img src="{{dataVideos[4].url}}" alt="">
+      <div class="image-upload">
+        <i class="fas fa-arrow-circle-up"></i>
+        <p>Upload <br> Your Own Video</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <p class="sidebar-title">Activity </p>
+      <p class="sidebar-tag">View timeline / Filter activities</p>
+    </div>
+    <div class="activity" *ngFor="let data of dataActivity;let i = index">
+      <div class="close"></div>
+      <img src="{{data.url}}" alt="">
+      <i class="fas fa-times"></i>
+      <p class="ket">{{dataUsers[i].name}} <small>commended</small>
+      <br>
+        <small>To change the amount...</small>
+      <br>
+        <i class="fal fa-comment"></i>
+        <small>{{data.id}} second ago</small>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+  <!-- Second -->
+  <div class="content">
+    <div class="main-image">
+      <div class="content-header">
+        <p class="content-title">People</p>
+        <span class="content-tag">View all</span>
+      </div>
+      <div class="image-title">
+        <img src="{{dataPeople[0].url}}" alt="">
+        <p><b>Waseem Arshad</b>
+          <br>
+          by {{dataUsers[0].name}}
+        </p>
+        <small>{{dataPeople[0].id}} views</small>
+      </div>
+      <div class="image-sec">
+        <img src="{{dataPeople[1].url}}" alt="">
+        <img src="{{dataPeople[2].url}}" alt="">
+      </div>
+    </div>
+    <div class="image-mo">
+      <img src="{{dataPeople[3].url}}" alt="">
+      <img src="{{dataPeople[4].url}}" alt="">
+      <div class="image-upload">
+        <i class="fas fa-record-vinyl"></i>
+        <p>Show <br> Your Work</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar-channels">
+    <div class="sidebar-channels-header">
+      <p class="sidebar-channels-title">Channels </p>
+      <p class="sidebar-channels-tag">Browse all channels</p>
+    </div>
+    <div class="channels">
+      <div class="close" *ngFor="let data of dataChannels;let i = index">
+        <div class="cls"></div>
+        <img src="{{data.url}}" alt="">
+        <i class="fas fa-plus"></i>
+        <p>{{dataUsers[i].name}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+  <!-- Third -->
+  <div class="content">
+    <div class="main-image">
+      <div class="content-header">
+        <p class="content-title">Documents</p>
+        <span class="content-tag">Browse all documents</span>
+      </div>
+      <div class="image-title">
+        <img src="{{dataPeople[0].url}}" alt="">
+        <p><b>Mobile ui & ux guide 2013</b>
+          <br>
+          by {{dataUsers[0].name}}
+        </p>
+        <small>{{dataDocuments[0].id}} views</small>
+      </div>
+      <div class="image-sec">
+        <img src="{{dataDocuments[1].url}}" alt="">
+        <img src="{{dataDocuments[2].url}}" alt="">
+      </div>
+    </div>
+    <div class="image-mo">
+      <img src="{{dataDocuments[3].url}}" alt="">
+      <img src="{{dataDocuments[4].url}}" alt="">
+      <div class="image-upload">
+        <i class="fas fa-plus-circle"></i>
+        <p>Share <br> Your Document</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <button class="twitter-btn"></button>
+  <button class="linkedin-btn"></button>
+  <button class="fb-btn"></button>
+
+  <div class="footer-nav">
+    <span>About /</span>
+    <span> For Business /</span>
+    <span> Suggestions /</span>
+    <span> Help & FAQs /</span>
+    <span> Contacs /</span>
+    <span> Pricing</span>
+  </div>
+
+  <div class="footer-container">
+    Copyrigth 2013 Companyname inc.
+    <br> Privacy / Terms
+  </div>
+</div>
